@@ -69,6 +69,7 @@
     // 添加为tabbar控制器的子控制器
     UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:childVc];
     [self addChildViewController:nav];
+    
 }
 
 

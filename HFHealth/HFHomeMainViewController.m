@@ -10,7 +10,7 @@
 
 static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/home.html?start=1&count=10";
 
-@interface HFHomeMainViewController ()
+@interface HFHomeMainViewController () <UITableViewDataSource, UITableViewDelegate>
 
 @end
 
@@ -20,6 +20,8 @@ static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/ho
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor greenColor];
+    
+    self.navigationController.navigationBar.barTintColor = kRGB(9, 185, 7);
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //    manager.baseURL = [NSURL URLWithString:@"http://kkhealth.api.kk-me.com/v6"];
@@ -31,10 +33,53 @@ static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/ho
     } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
         //        NSLog(@"responseObject == %@", responseObject);
         NSDictionary *dic = [NSJSONSerialization JSONObjectWithData:responseObject options:NSJSONReadingMutableContainers | NSJSONReadingMutableLeaves error:nil];
-        NSLog(@"dic == %@", dic);
+//        NSLog(@"dic == %@", dic);
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         
     }];
+    
+    [@[@1,@2,@3] bk_each:^(id obj) {
+        NSLog(@"%@", obj);
+    }];
+    
+    [@[@1,@2,@3] enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
+        NSLog(@"%@", obj);
+    }];
+    
+    // 为一个已经存在的类添加属性
+    NSObject *test = [[NSObject alloc] init];
+    [test bk_associateValue:@"Draveness" withKey:@"name"];
+    NSLog(@"%@", [test bk_associatedValueForKey:@"name"]);
+    
+    
+    UITapGestureRecognizer *singleTap = [UITapGestureRecognizer bk_recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        NSLog(@"Single tap.");
+    } delay:0.18];
+    [self.view addGestureRecognizer:singleTap];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView.rowHeight = 100;
+    [self.view addSubview:tableView];
+    
+}
+
+#pragma mark - UITableViewDataSource
+
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
+{
+    return 12;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    static NSString *ID = @"cell";
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
+    if (!cell) {
+        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
+    }
+    return cell;
 }
 
 - (void)didReceiveMemoryWarning {
