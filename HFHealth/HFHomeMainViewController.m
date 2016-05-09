@@ -18,7 +18,7 @@ static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/ho
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
+    
     self.view.backgroundColor = [UIColor greenColor];
     
     self.navigationController.navigationBar.barTintColor = kRGB(9, 185, 7);
