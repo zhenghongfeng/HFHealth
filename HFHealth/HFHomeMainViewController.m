@@ -7,6 +7,8 @@
 //
 
 #import "HFHomeMainViewController.h"
+#import "HFMyTest.h"
+#import "NSArray+Swizzle.h"
 
 static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/home.html?start=1&count=10";
 
@@ -22,6 +24,15 @@ static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/ho
     self.view.backgroundColor = [UIColor greenColor];
     
     self.navigationController.navigationBar.barTintColor = kRGB(9, 185, 7);
+    
+    HFMyTest *myTest = [[HFMyTest alloc] init];
+    NSLog(@"test == %@", myTest);
+    
+    
+    NSArray *arr = @[@"0", @"1", @"2", @"3"];
+    NSString *lastStr = [arr lastObject];
+    NSLog(@"lastStr == %@", lastStr);
+    
     
     AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
     //    manager.baseURL = [NSURL URLWithString:@"http://kkhealth.api.kk-me.com/v6"];

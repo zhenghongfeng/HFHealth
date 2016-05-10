@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1FA222379A5A524D3BF7B02D /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 87770DA41CF6789B9D17C74F /* libPods.a */; };
+		BA093AB31CE1F7F000F157DA /* UIView+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BA093AB21CE1F7F000F157DA /* UIView+Swizzle.m */; };
 		BAE9E9D91CD9DD4100771547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9E9D81CD9DD4100771547 /* main.m */; };
 		BAE9E9DC1CD9DD4100771547 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9E9DB1CD9DD4100771547 /* AppDelegate.m */; };
 		BAE9E9E41CD9DD4100771547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE9E9E31CD9DD4100771547 /* Assets.xcassets */; };
@@ -35,6 +36,9 @@
 		BAE9EA571CDB47FF00771547 /* tabBar_me_selected@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE9EA471CDB47FF00771547 /* tabBar_me_selected@2x.png */; };
 		BAE9EA581CDB47FF00771547 /* tabBar_me_selected@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAE9EA481CDB47FF00771547 /* tabBar_me_selected@3x.png */; };
 		BAE9EA5B1CDB4C8600771547 /* HFMyTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9EA5A1CDB4C8600771547 /* HFMyTabBarViewController.m */; };
+		BAE9EAA81CE1ECEF00771547 /* HFMyTest.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9EAA71CE1ECEF00771547 /* HFMyTest.m */; };
+		BAE9EAAB1CE1EDB400771547 /* NSObject+HFExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9EAAA1CE1EDB400771547 /* NSObject+HFExtension.m */; };
+		BAE9EAAE1CE1F18500771547 /* NSArray+Swizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9EAAD1CE1F18500771547 /* NSArray+Swizzle.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +62,8 @@
 		582069FDF50A078E1A8655AD /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		81F31CF97B9BFF1D52B7769B /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		87770DA41CF6789B9D17C74F /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		BA093AB11CE1F7F000F157DA /* UIView+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Swizzle.h"; sourceTree = "<group>"; };
+		BA093AB21CE1F7F000F157DA /* UIView+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Swizzle.m"; sourceTree = "<group>"; };
 		BAE9E9D41CD9DD4100771547 /* HFHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BAE9E9D81CD9DD4100771547 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		BAE9E9DA1CD9DD4100771547 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -99,6 +105,12 @@
 		BAE9EA5A1CDB4C8600771547 /* HFMyTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFMyTabBarViewController.m; sourceTree = "<group>"; };
 		BAE9EA5C1CDB5ADA00771547 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		BAE9EA5D1CDB5B6700771547 /* HFDefine.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = HFDefine.h; sourceTree = "<group>"; };
+		BAE9EAA61CE1ECEF00771547 /* HFMyTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFMyTest.h; sourceTree = "<group>"; };
+		BAE9EAA71CE1ECEF00771547 /* HFMyTest.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFMyTest.m; sourceTree = "<group>"; };
+		BAE9EAA91CE1EDB400771547 /* NSObject+HFExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+HFExtension.h"; sourceTree = "<group>"; };
+		BAE9EAAA1CE1EDB400771547 /* NSObject+HFExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+HFExtension.m"; sourceTree = "<group>"; };
+		BAE9EAAC1CE1F18500771547 /* NSArray+Swizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSArray+Swizzle.h"; sourceTree = "<group>"; };
+		BAE9EAAD1CE1F18500771547 /* NSArray+Swizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSArray+Swizzle.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -186,6 +198,14 @@
 				BAE9EA141CDB406A00771547 /* HFMeMainViewController.m */,
 				BAE9EA591CDB4C8600771547 /* HFMyTabBarViewController.h */,
 				BAE9EA5A1CDB4C8600771547 /* HFMyTabBarViewController.m */,
+				BAE9EAA61CE1ECEF00771547 /* HFMyTest.h */,
+				BAE9EAA71CE1ECEF00771547 /* HFMyTest.m */,
+				BAE9EAA91CE1EDB400771547 /* NSObject+HFExtension.h */,
+				BAE9EAAA1CE1EDB400771547 /* NSObject+HFExtension.m */,
+				BAE9EAAC1CE1F18500771547 /* NSArray+Swizzle.h */,
+				BAE9EAAD1CE1F18500771547 /* NSArray+Swizzle.m */,
+				BA093AB11CE1F7F000F157DA /* UIView+Swizzle.h */,
+				BA093AB21CE1F7F000F157DA /* UIView+Swizzle.m */,
 			);
 			path = HFHealth;
 			sourceTree = "<group>";
@@ -455,8 +475,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				BAE9EA121CDB404000771547 /* HFDiscoverMainViewController.m in Sources */,
+				BAE9EAAB1CE1EDB400771547 /* NSObject+HFExtension.m in Sources */,
+				BA093AB31CE1F7F000F157DA /* UIView+Swizzle.m in Sources */,
+				BAE9EAA81CE1ECEF00771547 /* HFMyTest.m in Sources */,
 				BAE9EA5B1CDB4C8600771547 /* HFMyTabBarViewController.m in Sources */,
 				BAE9EA0C1CDB3FE700771547 /* HFHomeMainViewController.m in Sources */,
+				BAE9EAAE1CE1F18500771547 /* NSArray+Swizzle.m in Sources */,
 				BAE9E9DC1CD9DD4100771547 /* AppDelegate.m in Sources */,
 				BAE9EA151CDB406A00771547 /* HFMeMainViewController.m in Sources */,
 				BAE9E9D91CD9DD4100771547 /* main.m in Sources */,
