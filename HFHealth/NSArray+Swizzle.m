@@ -23,7 +23,7 @@
 - (instancetype)myLastObject
 {
     id ret = [self myLastObject];
-    NSLog(@"**********  myLastObject *********** ");
+//    NSLog(@"**********  myLastObject *********** ");
     return ret;
 }
 

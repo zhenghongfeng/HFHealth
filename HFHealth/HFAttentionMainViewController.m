@@ -10,6 +10,9 @@
 
 @interface HFAttentionMainViewController ()
 
+/** <#注释#> */
+@property (nonatomic, strong) CMRequest *request;
+
 @end
 
 @implementation HFAttentionMainViewController
@@ -18,6 +21,15 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     self.view.backgroundColor = [UIColor redColor];
+    
+    [self.request POST:@"http://cdn.4399sj.com/app/iphone/v2.2/home.html?start=1&count=10" parameters:nil success:^(CMRequest *request, NSString *responseString) {
+        
+        NSDictionary *dict = [responseString objectFromJSONString];
+        NSLog(@"dict == %@", dict);
+        
+    } failure:^(CMRequest *request, NSError *error) {
+        NSLog(@"error == %@", error);
+    }];
     
 }
 
