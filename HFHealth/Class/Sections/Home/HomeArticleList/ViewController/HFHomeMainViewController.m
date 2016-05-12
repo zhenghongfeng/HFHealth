@@ -10,7 +10,6 @@
 #import "HFMyTest.h"
 #import "NSArray+Swizzle.h"
 #import "HFHomeArticleListViewModel.h"
-
 #import "HFHomeArticleListView.h"
 
 static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/home.html?start=1&count=10";
@@ -98,16 +97,16 @@ static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/ho
 //    NSLog(@"%@", [test bk_associatedValueForKey:@"name"]);
 //    
 //    
-//    UITapGestureRecognizer *singleTap = [UITapGestureRecognizer bk_recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
-//        NSLog(@"Single tap.");
-//    } delay:0.18];
-//    [self.view addGestureRecognizer:singleTap];
-//    
-//    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
-//    tableView.delegate = self;
-//    tableView.dataSource = self;
-//    tableView.rowHeight = 100;
-//    [self.view addSubview:tableView];
+    UITapGestureRecognizer *singleTap = [UITapGestureRecognizer bk_recognizerWithHandler:^(UIGestureRecognizer *sender, UIGestureRecognizerState state, CGPoint location) {
+        NSLog(@"Single tap.");
+    } delay:0.18];
+    [self.view addGestureRecognizer:singleTap];
+    
+    UITableView *tableView = [[UITableView alloc] initWithFrame:self.view.bounds style:UITableViewStylePlain];
+    tableView.delegate = self;
+    tableView.dataSource = self;
+    tableView.rowHeight = 100;
+    [self.view addSubview:tableView];
     
 }
 
