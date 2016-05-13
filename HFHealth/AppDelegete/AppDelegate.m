@@ -7,7 +7,7 @@
 //
 
 #import "AppDelegate.h"
-#import "HFMyTabBarViewController.h"
+#import "HFMyTabBarController.h"
 
 
 @interface AppDelegate ()
@@ -20,7 +20,7 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.rootViewController = [HFMyTabBarViewController new];
+    self.window.rootViewController = [HFMyTabBarController new];
     [self.window makeKeyAndVisible];
     
     return YES;
