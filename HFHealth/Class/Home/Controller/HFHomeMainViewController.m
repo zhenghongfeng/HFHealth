@@ -7,8 +7,7 @@
 //
 
 #import "HFHomeMainViewController.h"
-
-static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/home.html?start=1&count=10";
+#import "HFArticle.h"
 
 @interface HFHomeMainViewController () <UITableViewDataSource, UITableViewDelegate>
 
@@ -31,16 +30,31 @@ static NSString *const HFRequestURL = @"http://cdn.4399sj.com/app/iphone/v2.2/ho
     tableView.rowHeight = 100;
     [self.view addSubview:tableView];
     
-    [[HFNetworkManager sharedNetworkManager] getRequestWithUrlString:HFRequestURL];
     
-    AFHTTPSessionManager *manager = [AFHTTPSessionManager manager];
-    manager.responseSerializer.acceptableContentTypes = [NSSet setWithObject:@"text/html"];
-    [manager GET:HFRequestURL parameters:nil progress:^(NSProgress * _Nonnull downloadProgress) {
+    NSDictionary *dict = @{
+                           @"querytype": @0,
+                           @"querycount": @10,
+                           @"startid": @0,
+                           @"cateid": @0
+                           };
+    [[HFNetworkManager sharedNetworkManager] sendGetRequestWithURLString:@"/article/index" parameters:dict progress:^(NSProgress * _Nonnull downloadProgress) {
         
-    } success:^(NSURLSessionDataTask * _Nonnull task, id  _Nullable responseObject) {
-        NSLog(@"responseObject == %@", responseObject);
+    } success:^(NSURLSessionDataTask * _Nonnull task, id _Nullable responseObject) {
+        
+//        NSLog(@"%@", responseObject);
+        NSArray *array = [[responseObject[@"data"] objectForKey:@"articlelist"] objectForKey:@"datalist"];
+//        NSLog(@"array == %@", array);
+        
+        
+        NSArray *models = [HFArticle mj_objectArrayWithKeyValuesArray:array];
+        
+        NSLog(@"models == %@", [models[0] myDescription]);
+        
+        
     } failure:^(NSURLSessionDataTask * _Nullable task, NSError * _Nonnull error) {
         NSLog(@"error == %@", error);
+    } noNetWork:^{
+        NSLog(@"noNetWork");
     }];
     
 }

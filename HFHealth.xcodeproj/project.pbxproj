@@ -18,6 +18,13 @@
 		BA520FDF1CE57D48000B34C5 /* HFMyNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = BA520FDE1CE57D48000B34C5 /* HFMyNavigationController.m */; };
 		BA520FE41CE57E76000B34C5 /* UIView+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BA520FE11CE57E76000B34C5 /* UIView+Extension.m */; };
 		BA520FE51CE57E76000B34C5 /* UIBarButtonItem+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BA520FE31CE57E76000B34C5 /* UIBarButtonItem+Extension.m */; };
+		BAC277B71CE9922C000A0E6D /* HFClient.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC277B61CE9922C000A0E6D /* HFClient.m */; };
+		BAC277BA1CE99CB0000A0E6D /* NSString+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC277B91CE99CB0000A0E6D /* NSString+Extension.m */; };
+		BAC277BC1CE9A0DD000A0E6D /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BAC277BB1CE9A0DD000A0E6D /* AdSupport.framework */; };
+		BAC277C41CE9A254000A0E6D /* CommonUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC277BF1CE9A254000A0E6D /* CommonUtil.m */; };
+		BAC277C51CE9A254000A0E6D /* Regular.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC277C11CE9A254000A0E6D /* Regular.m */; };
+		BAC277C61CE9A254000A0E6D /* TimeUtil.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC277C31CE9A254000A0E6D /* TimeUtil.m */; };
+		BAC277C91CE9C808000A0E6D /* HFArticle.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC277C81CE9C808000A0E6D /* HFArticle.m */; };
 		BAC984261CE5A09C0048B97C /* HFNetworkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = BAC984251CE5A09C0048B97C /* HFNetworkManager.m */; };
 		BAE9E9D91CD9DD4100771547 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = BAE9E9D81CD9DD4100771547 /* main.m */; };
 		BAE9E9E41CD9DD4100771547 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BAE9E9E31CD9DD4100771547 /* Assets.xcassets */; };
@@ -81,6 +88,19 @@
 		BA520FE11CE57E76000B34C5 /* UIView+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extension.m"; sourceTree = "<group>"; };
 		BA520FE21CE57E76000B34C5 /* UIBarButtonItem+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+Extension.h"; sourceTree = "<group>"; };
 		BA520FE31CE57E76000B34C5 /* UIBarButtonItem+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+Extension.m"; sourceTree = "<group>"; };
+		BAC277B51CE9922C000A0E6D /* HFClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFClient.h; sourceTree = "<group>"; };
+		BAC277B61CE9922C000A0E6D /* HFClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFClient.m; sourceTree = "<group>"; };
+		BAC277B81CE99CB0000A0E6D /* NSString+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSString+Extension.h"; sourceTree = "<group>"; };
+		BAC277B91CE99CB0000A0E6D /* NSString+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSString+Extension.m"; sourceTree = "<group>"; };
+		BAC277BB1CE9A0DD000A0E6D /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		BAC277BE1CE9A254000A0E6D /* CommonUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		BAC277BF1CE9A254000A0E6D /* CommonUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
+		BAC277C01CE9A254000A0E6D /* Regular.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Regular.h; sourceTree = "<group>"; };
+		BAC277C11CE9A254000A0E6D /* Regular.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Regular.m; sourceTree = "<group>"; };
+		BAC277C21CE9A254000A0E6D /* TimeUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TimeUtil.h; sourceTree = "<group>"; };
+		BAC277C31CE9A254000A0E6D /* TimeUtil.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TimeUtil.m; sourceTree = "<group>"; };
+		BAC277C71CE9C808000A0E6D /* HFArticle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFArticle.h; sourceTree = "<group>"; };
+		BAC277C81CE9C808000A0E6D /* HFArticle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFArticle.m; sourceTree = "<group>"; };
 		BAC984241CE5A09C0048B97C /* HFNetworkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFNetworkManager.h; sourceTree = "<group>"; };
 		BAC984251CE5A09C0048B97C /* HFNetworkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFNetworkManager.m; sourceTree = "<group>"; };
 		BAE9E9D41CD9DD4100771547 /* HFHealth.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HFHealth.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -118,6 +138,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAC277BC1CE9A0DD000A0E6D /* AdSupport.framework in Frameworks */,
 				1FA222379A5A524D3BF7B02D /* libPods.a in Frameworks */,
 				3E9D501A8525A48B23B1ED5E /* Pods.framework in Frameworks */,
 			);
@@ -160,6 +181,7 @@
 		BA093AB41CE2F85F00F157DA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				BAC277BB1CE9A0DD000A0E6D /* AdSupport.framework */,
 				BEFDB6DC233D265C50390F34 /* Pods.framework */,
 			);
 			name = Frameworks;
@@ -274,6 +296,8 @@
 		BA520FC71CE5785E000B34C5 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				BAC277C71CE9C808000A0E6D /* HFArticle.h */,
+				BAC277C81CE9C808000A0E6D /* HFArticle.m */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -321,6 +345,7 @@
 		BA520FCF1CE5785E000B34C5 /* Other */ = {
 			isa = PBXGroup;
 			children = (
+				BAC277BD1CE9A254000A0E6D /* CommonUtil */,
 				BA520FD11CE5785E000B34C5 /* Controller */,
 				BA520FD61CE5785E000B34C5 /* Model */,
 				BA520FD71CE5785E000B34C5 /* View */,
@@ -338,6 +363,8 @@
 				BA520FE11CE57E76000B34C5 /* UIView+Extension.m */,
 				BA520FE21CE57E76000B34C5 /* UIBarButtonItem+Extension.h */,
 				BA520FE31CE57E76000B34C5 /* UIBarButtonItem+Extension.m */,
+				BAC277B81CE99CB0000A0E6D /* NSString+Extension.h */,
+				BAC277B91CE99CB0000A0E6D /* NSString+Extension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -375,11 +402,26 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		BAC277BD1CE9A254000A0E6D /* CommonUtil */ = {
+			isa = PBXGroup;
+			children = (
+				BAC277BE1CE9A254000A0E6D /* CommonUtil.h */,
+				BAC277BF1CE9A254000A0E6D /* CommonUtil.m */,
+				BAC277C01CE9A254000A0E6D /* Regular.h */,
+				BAC277C11CE9A254000A0E6D /* Regular.m */,
+				BAC277C21CE9A254000A0E6D /* TimeUtil.h */,
+				BAC277C31CE9A254000A0E6D /* TimeUtil.m */,
+			);
+			path = CommonUtil;
+			sourceTree = "<group>";
+		};
 		BAC984231CE59EC60048B97C /* Network */ = {
 			isa = PBXGroup;
 			children = (
 				BAC984241CE5A09C0048B97C /* HFNetworkManager.h */,
 				BAC984251CE5A09C0048B97C /* HFNetworkManager.m */,
+				BAC277B51CE9922C000A0E6D /* HFClient.h */,
+				BAC277B61CE9922C000A0E6D /* HFClient.m */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -684,12 +726,18 @@
 			files = (
 				BAC984261CE5A09C0048B97C /* HFNetworkManager.m in Sources */,
 				BA520FE41CE57E76000B34C5 /* UIView+Extension.m in Sources */,
+				BAC277C61CE9A254000A0E6D /* TimeUtil.m in Sources */,
+				BAC277C41CE9A254000A0E6D /* CommonUtil.m in Sources */,
+				BAC277C91CE9C808000A0E6D /* HFArticle.m in Sources */,
 				BA520FD91CE5785E000B34C5 /* HFDiscoverMainViewController.m in Sources */,
 				BA520FDC1CE5785E000B34C5 /* HFMyTabBarController.m in Sources */,
 				BA093ABE1CE2F99600F157DA /* AppDelegate.m in Sources */,
 				BA520FE51CE57E76000B34C5 /* UIBarButtonItem+Extension.m in Sources */,
+				BAC277BA1CE99CB0000A0E6D /* NSString+Extension.m in Sources */,
+				BAC277B71CE9922C000A0E6D /* HFClient.m in Sources */,
 				BAE9E9D91CD9DD4100771547 /* main.m in Sources */,
 				BA520FDB1CE5785E000B34C5 /* HFMeMainViewController.m in Sources */,
+				BAC277C51CE9A254000A0E6D /* Regular.m in Sources */,
 				BA520FDF1CE57D48000B34C5 /* HFMyNavigationController.m in Sources */,
 				BA520FD81CE5785E000B34C5 /* HFAttentionMainViewController.m in Sources */,
 				BA520FDA1CE5785E000B34C5 /* HFHomeMainViewController.m in Sources */,
