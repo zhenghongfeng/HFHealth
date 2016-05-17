@@ -58,11 +58,11 @@
     NSMutableDictionary *textAttrs = [NSMutableDictionary dictionary];
     textAttrs[NSForegroundColorAttributeName] = [UIColor whiteColor];
     // UITextAttributeFont  --> NSFontAttributeName(iOS7)
-#warning 过期 : 并不代表不能用, 仅仅是有最新的方案可以取代它
-    textAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
-    // UIOffsetZero是结构体, 只要包装成NSValue对象, 才能放进字典\数组中
-    textAttrs[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetZero];
-    [navigationBarAppearance setTitleTextAttributes:textAttrs];
+//#warning 过期 : 并不代表不能用, 仅仅是有最新的方案可以取代它
+//    textAttrs[NSFontAttributeName] = [UIFont boldSystemFontOfSize:20];
+//    // UIOffsetZero是结构体, 只要包装成NSValue对象, 才能放进字典\数组中
+//    textAttrs[UITextAttributeTextShadowOffset] = [NSValue valueWithUIOffset:UIOffsetZero];
+//    [navigationBarAppearance setTitleTextAttributes:textAttrs];
     
     //    [navigationBarAppearance setBackgroundImage:[UIImage imageWithColor:[UIColor colorWithHexString:[NSObject baseURLStrIsTest]? @"0x3bbd79" : @"0x28303b"]] forBarMetrics:UIBarMetricsDefault];
     //    [navigationBarAppearance setTintColor:[UIColor blackColor]];//返回按钮的箭头颜色
@@ -118,7 +118,6 @@
 
 - (void)back
 {
-#warning 这里用的是self, 因为self就是当前正在使用的导航控制器
     [self popViewControllerAnimated:YES];
 }
 

@@ -15,30 +15,23 @@
 @property (nonatomic, assign) NSInteger commentcount;
 /** 描述 */
 @property (nonatomic, copy) NSString *myDescription;
-/** <#注释#> */
+/** h5 */
 @property (nonatomic, copy) NSString *href;
-/** <#注释#> */
-@property (nonatomic, assign) NSInteger id;
-/** <#注释#> */
+/** 文章id */
+@property (nonatomic, assign) NSInteger myId;
+/** 图片url */
 @property (nonatomic, copy) NSString *imageurl;
 /** <#注释#> */
 @property (nonatomic, copy) NSString *mpname;
-/** <#注释#> */
+/** 阅读数 */
 @property (nonatomic, assign) NSInteger readcount;
 /** <#注释#> */
 @property (nonatomic, assign) NSInteger sortindex;
 /** <#注释#> */
 @property (nonatomic, copy) NSString *sortindexv4;
-/** <#注释#> */
+/** 标题 */
 @property (nonatomic, copy) NSString *title;
-/** <#注释#> */
+/** 文章类型 */
 @property (nonatomic, assign) NSInteger type;
-
-//- (instancetype)initWithDic:(NSDictionary *)dic;
-//
-//+ (instancetype)dossierWithDic:(NSDictionary *)dic;
-//
-//// 字典数组转模型数组
-//+ (NSMutableArray *)arrayWithDossierList:(NSArray *)array;
 
 @end

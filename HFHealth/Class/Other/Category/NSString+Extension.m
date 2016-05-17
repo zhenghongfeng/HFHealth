@@ -116,9 +116,6 @@
     NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
     [dateFormatter setDateFormat:@"yyyy-MM-dd HH:mm:ss"];
     return [dateFormatter stringFromDate:dateTime];
-    
-    
-    
 }
 
 -(NSString *)getStringByRegex:(NSString *)regex
