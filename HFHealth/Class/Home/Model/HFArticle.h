@@ -18,7 +18,7 @@
 /** h5 */
 @property (nonatomic, copy) NSString *href;
 /** 文章id */
-@property (nonatomic, assign) NSInteger myId;
+@property (nonatomic, strong) NSNumber *myId;
 /** 图片url */
 @property (nonatomic, copy) NSString *imageurl;
 /** <#注释#> */

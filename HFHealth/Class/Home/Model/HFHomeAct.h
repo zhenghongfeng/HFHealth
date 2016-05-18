@@ -13,7 +13,7 @@
 /** <#注释#> */
 @property (nonatomic, copy) NSString *myDescription;
 /** <#注释#> */
-@property (nonatomic, assign) NSInteger myId;
+@property (nonatomic, strong) NSNumber *myId;
 /** <#注释#> */
 @property (nonatomic, copy) NSString *imageurl;
 /** <#注释#> */
