@@ -20,7 +20,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // 清空弹出手势的代理，就可以恢复左滑手势
-    self.interactivePopGestureRecognizer.delegate = nil;
+//    self.interactivePopGestureRecognizer.delegate = nil;
 }
 /**
  *  当第一次使用这个类的时候调用一次
@@ -31,7 +31,7 @@
     [self setupNavigationBarTheme];
     
     // 设置UIBarButtonItem的主题
-    [self setupBarButtonItemTheme];
+//    [self setupBarButtonItemTheme];
 }
 
 /**
@@ -110,7 +110,7 @@
     if (self.viewControllers.count > 0) {
         viewController.hidesBottomBarWhenPushed = YES; // 如果现在Push的不是栈底控制器（最先push进来的那个控制器）
         // 设置导航栏按钮
-        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"back" target:self action:@selector(back)];
+//        viewController.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImageName:@"back" target:self action:@selector(back)];
         //        viewController.navigationItem.rightBarButtonItem = [UIBarButtonItem itemWithImageName:@"navigationbar_more" target:self action:@selector(more)];
     }
     [super pushViewController:viewController animated:animated];

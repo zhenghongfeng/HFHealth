@@ -32,6 +32,6 @@
 /** 标题 */
 @property (nonatomic, copy) NSString *title;
 /** 文章类型 */
-@property (nonatomic, assign) NSInteger type;
+@property (nonatomic, assign) NSInteger myType;
 
 @end

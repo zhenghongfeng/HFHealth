@@ -22,7 +22,6 @@
 /** readCount label */
 @property (nonatomic, weak) UILabel *myReadCountLabel;
 
-
 @end
 
 @implementation HFHomeTableViewCell

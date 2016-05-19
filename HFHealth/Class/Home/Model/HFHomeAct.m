@@ -18,7 +18,8 @@
         [HFHomeAct mj_setupReplacedKeyFromPropertyName:^NSDictionary *{
             return @{
                      @"myDescription": @"description",
-                     @"myId": @"id"
+                     @"myId": @"id",
+                     @"myType": @"type"
                      };
         }];
     }

@@ -10,6 +10,8 @@
 #import "HFArticle.h"
 #import "HFHomeTableViewCell.h"
 #import "HFHomeAct.h"
+#import "HFDiseaseSubjectViewController.h"
+#import "HFArticleDetailViewController.h"
 
 @interface HFHomeMainViewController () <UITableViewDataSource, UITableViewDelegate, SDCycleScrollViewDelegate>
 
@@ -208,7 +210,6 @@
 
 
 #pragma mark - UITableViewDataSource
-
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
     return self.articles.count;
@@ -227,11 +228,37 @@
 }
 
 #pragma mark - UITableViewDelegate
-
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    if ([self.articles[indexPath.row] myType] == 100) {
+        HFDiseaseSubjectViewController *vc = [HFDiseaseSubjectViewController new];
+        [self.navigationController pushViewController:vc animated:YES];
+    }
+}
+
+#pragma mark - SDCycleScrollViewDelegate
+- (void)cycleScrollView:(SDCycleScrollView *)cycleScrollView didSelectItemAtIndex:(NSInteger)index;
+{
+    switch ([self.acts[index] myType]) {
+        case 1: {
+            NSLog(@"文章详情");
+            HFArticleDetailViewController *vc = [HFArticleDetailViewController new];
+            vc.homeAct = self.acts[index];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 2:
+            NSLog(@"活动");
+            break;
+        case 99:
+            NSLog(@"某个疾病主题");
+            break;
+            
+        default:
+            break;
+    }
 }
 
 @end

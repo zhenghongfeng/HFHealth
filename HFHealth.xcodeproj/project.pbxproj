@@ -52,6 +52,8 @@
 		BAEF547B1CEC422200415EC1 /* image_placeholder@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAEF54791CEC422200415EC1 /* image_placeholder@3x.png */; };
 		BAEF547E1CEC620C00415EC1 /* forward@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAEF547C1CEC620C00415EC1 /* forward@2x.png */; };
 		BAEF547F1CEC620C00415EC1 /* forward@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = BAEF547D1CEC620C00415EC1 /* forward@3x.png */; };
+		BAEF54821CED57D400415EC1 /* HFDiseaseSubjectViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF54811CED57D400415EC1 /* HFDiseaseSubjectViewController.m */; };
+		BAEF54851CED622200415EC1 /* HFArticleDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = BAEF54841CED622200415EC1 /* HFArticleDetailViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,10 @@
 		BAEF54791CEC422200415EC1 /* image_placeholder@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "image_placeholder@3x.png"; sourceTree = "<group>"; };
 		BAEF547C1CEC620C00415EC1 /* forward@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward@2x.png"; sourceTree = "<group>"; };
 		BAEF547D1CEC620C00415EC1 /* forward@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "forward@3x.png"; sourceTree = "<group>"; };
+		BAEF54801CED57D400415EC1 /* HFDiseaseSubjectViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFDiseaseSubjectViewController.h; sourceTree = "<group>"; };
+		BAEF54811CED57D400415EC1 /* HFDiseaseSubjectViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFDiseaseSubjectViewController.m; sourceTree = "<group>"; };
+		BAEF54831CED622200415EC1 /* HFArticleDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HFArticleDetailViewController.h; sourceTree = "<group>"; };
+		BAEF54841CED622200415EC1 /* HFArticleDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HFArticleDetailViewController.m; sourceTree = "<group>"; };
 		BEFDB6DC233D265C50390F34 /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -304,6 +310,10 @@
 			children = (
 				BA520FC51CE5785E000B34C5 /* HFHomeMainViewController.h */,
 				BA520FC61CE5785E000B34C5 /* HFHomeMainViewController.m */,
+				BAEF54801CED57D400415EC1 /* HFDiseaseSubjectViewController.h */,
+				BAEF54811CED57D400415EC1 /* HFDiseaseSubjectViewController.m */,
+				BAEF54831CED622200415EC1 /* HFArticleDetailViewController.h */,
+				BAEF54841CED622200415EC1 /* HFArticleDetailViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -769,6 +779,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BAEF54851CED622200415EC1 /* HFArticleDetailViewController.m in Sources */,
 				BAC984261CE5A09C0048B97C /* HFNetworkManager.m in Sources */,
 				BAEF54731CEB1D2700415EC1 /* HFConst.m in Sources */,
 				BA520FE41CE57E76000B34C5 /* UIView+Extension.m in Sources */,
@@ -781,6 +792,7 @@
 				BA520FE51CE57E76000B34C5 /* UIBarButtonItem+Extension.m in Sources */,
 				BAC277BA1CE99CB0000A0E6D /* NSString+Extension.m in Sources */,
 				BA3F228C1CEAB8E200460FCC /* HFHomeTableViewCell.m in Sources */,
+				BAEF54821CED57D400415EC1 /* HFDiseaseSubjectViewController.m in Sources */,
 				BAC277B71CE9922C000A0E6D /* HFClient.m in Sources */,
 				BAE9E9D91CD9DD4100771547 /* main.m in Sources */,
 				BA520FDB1CE5785E000B34C5 /* HFMeMainViewController.m in Sources */,
