@@ -9,9 +9,12 @@
 #import "HFArticleDetailViewController.h"
 #import "HFHomeAct.h"
 
-@interface HFArticleDetailViewController () <UIWebViewDelegate>
+@interface HFArticleDetailViewController () <UIWebViewDelegate, ArticleDetailHtmlJSExportProtocol>
+
+@property (nonatomic, strong) JSContext *context;
 
 @end
+
 @implementation HFArticleDetailViewController
 
 - (void)viewDidLoad
@@ -26,18 +29,38 @@
     
     UIWebView *webView = [[UIWebView alloc] initWithFrame:self.view.bounds];
     webView.delegate = self;
-    NSURL *url = [NSURL URLWithString:self.homeAct.url];
+    NSString *urlString = [NSString stringWithFormat:@"%@?from=app&accesstoken=%@&apiversion=%@&appversion=%@&deviceid=%@&devicename=%@&devicetype=%@", self.homeAct.url, TokenGet, apiversion, AppVersion, DeviceId, DeviceName, DeviceType];
+    NSURL *url = [NSURL URLWithString:urlString];
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
     [self.view addSubview:webView];
+}
+
+-(void)webViewDidFinishLoad:(UIWebView *)webView
+{
+    //保存上次加载的页面里的字体大小  以备下次没网的时候进行加载
+//    NSArray *urlArr = [self.url componentsSeparatedByString:@"&fontsize="];
+//    if (urlArr.count==2)
+//    {
+//        NSString *lastFontSizeStr = [urlArr lastObject];
+//        LastH5FontSizeSave(lastFontSizeStr);
+//        fontString = lastFontSizeStr;
+//    }
+//    
+//    NSLog(@"fontstringwebload = %@",fontString);
+//    //
+    _context = [[JSContext alloc] init];
+    _context = [webView valueForKeyPath:@"documentView.webView.mainFrame.javaScriptContext"];
+    NSLog(@"_context = %@",_context);
     
-    //获取页面title
-    NSString *title = [webView stringByEvaluatingJavaScriptFromString:@"document.title"];
-    NSLog(@"title == %@", title);
-    
-    //获取当前的URL
-    NSString *currenturl = [webView stringByEvaluatingJavaScriptFromString:@"document.location.href"];
-    NSLog(@"currenturl == %@", currenturl);
+    _context[@"kk"] = self;
+}
+
+#pragma mark - 关注和取消关注的交互方法
+- (void)handleFunctionFollowWithFollowNumber:(NSNumber *)followNumber professorId:(NSNumber *)professorId
+{
+    NSLog(@"followNumber = %@",followNumber);
+    NSLog(@"professorId = %@",professorId);
 }
 
 //- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
