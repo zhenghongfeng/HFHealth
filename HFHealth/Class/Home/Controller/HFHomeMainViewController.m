@@ -232,9 +232,26 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
-    if ([self.articles[indexPath.row] myType] == 100) {
-        HFDiseaseSubjectViewController *vc = [HFDiseaseSubjectViewController new];
-        [self.navigationController pushViewController:vc animated:YES];
+    switch ([self.articles[indexPath.row] myType]) {
+        case 1: {
+            NSLog(@"文章详情");
+            HFArticleDetailViewController *vc = [HFArticleDetailViewController new];
+            vc.article = self.articles[indexPath.row];
+            [self.navigationController pushViewController:vc animated:YES];
+            break;
+        }
+        case 99:
+            NSLog(@"某个疾病主题");
+            break;
+        case 100:{
+            HFDiseaseSubjectViewController *vc = [HFDiseaseSubjectViewController new];
+            [self.navigationController pushViewController:vc animated:YES];
+            NSLog(@"疝病专题");
+            
+            break;
+        }
+        default:
+            break;
     }
 }
 

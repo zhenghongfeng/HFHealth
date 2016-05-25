@@ -34,6 +34,20 @@
     NSURLRequest *request = [NSURLRequest requestWithURL:url];
     [webView loadRequest:request];
     [self.view addSubview:webView];
+    
+    JSContext *context = [[JSContext alloc] init];
+    context.exceptionHandler = ^(JSContext *con, JSValue *exception) {
+        NSLog(@"%@", exception);
+        con.exception = exception;
+    };
+    
+    
+    context[@"log"] = ^() {
+        NSArray *args = [JSContext currentArguments];
+        for (id obj in args) {
+            NSLog(@"%@",obj);
+        }
+    };
 }
 
 -(void)webViewDidFinishLoad:(UIWebView *)webView
@@ -63,30 +77,6 @@
     NSLog(@"professorId = %@",professorId);
 }
 
-//- (BOOL)webView:(UIWebView *)webView shouldStartLoadWithRequest:(NSURLRequest *)request navigationType:(UIWebViewNavigationType)navigationType
-//{
-//    NSURL *url = [request URL];
-//    if([[url scheme] isEqualToString:@"devzeng"]) {
-//        //处理JavaScript和Objective-C交互
-//        if([[url host] isEqualToString:@"login"])
-//        {
-//            //获取URL上面的参数
-//            NSDictionary *params = [self getParams:[url query]];
-//            BOOL status = [self login:[params objectForKey:@"name"] password:[params objectForKey:@"password"]];
-//            if(status)
-//            {
-//                //调用JS回调
-//                [webView stringByEvaluatingJavaScriptFromString:@"alert('登录成功!')"];
-//            }
-//            else
-//            {
-//                [webView stringByEvaluatingJavaScriptFromString:@"alert('登录失败!')"];
-//            }
-//        }
-//        return NO;
-//    }
-//    return YES;
-//}
 
 
 

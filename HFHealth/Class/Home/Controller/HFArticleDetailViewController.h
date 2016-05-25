@@ -16,16 +16,19 @@ JSExportAs
  - (void)handleFunctionFollowWithFollowNumber:(NSNumber *)followNumber professorId:(NSNumber *)professorId
  );
 
+
+
 @end
 
 
 @class HFHomeAct;
+@class HFArticle;
 
 @interface HFArticleDetailViewController : UIViewController
 
 /** model */
 @property (nonatomic, strong) HFHomeAct *homeAct;
-
+@property (nonatomic, strong) HFArticle *article;
 
 
 
